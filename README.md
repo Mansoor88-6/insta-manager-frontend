@@ -6,18 +6,17 @@ Application that helps users manage their Instagram business/creator accounts by
 
 - Facebook Login Integration
 - Instagram Business/Creator Account Connection
-- Post Management (upcoming)
+- Post Management
 - User Authentication
 - Secure Token Management
 
 ## Prerequisites
 
-Before using this application, ensure you have:
+Before using this application, As per Meta's current requirements ensure you have:
 
 
 1. An Instagram Business or Creator account
-2. Your Instagram account must be connected to a Facebook Page
-
+2. Your Instagram account must be connected to a Facebook Page 
 ## Installation
 
 1. Clone the repository:

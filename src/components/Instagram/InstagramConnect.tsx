@@ -66,6 +66,9 @@ export default function InstagramConnect() {
       setLoading(true);
       setError(null);
 
+      console.log("accessToken", accessToken);
+      console.log("pageId", pageId);
+
       const result = await fetch(
         `${import.meta.env.VITE_API_URL}/api/instagram/setup`,
         {

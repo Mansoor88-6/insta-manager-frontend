@@ -1,0 +1,484 @@
+
+.auth-container {
+  max-width: 400px;
+  margin: 4rem auto;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #0070f3;
+  box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #a0aec0;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.auth-container button:hover:not(:disabled) {
+  background-color: #0051b3;
+}
+
+.auth-container button:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+
+.sign-out-btn {
+  width: auto;
+  padding: 0.5rem 1rem;
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.sign-out-btn:hover {
+  background-color: #c53030;
+}
+
+
+.toggle-auth-mode {
+  margin-top: 1rem;
+  background: transparent;
+  color: #0070f3;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  border: none;
+}
+
+.toggle-auth-mode:hover {
+  text-decoration: underline;
+}
+
+
+.error {
+  background-color: #fff5f5;
+  color: #e53e3e;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  border: 1px solid #feb2b2;
+}
+
+.success {
+  background-color: #f0fff4;
+  color: #2f855a;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  border: 1px solid #9ae6b4;
+}
+
+body {
+  background-color: #f7fafc;
+  min-height: 100vh;
+}
+
+.layout {
+  min-height: 100vh;
+}
+
+.layout header {
+  background-color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.layout nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layout main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.dashboard {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.instagram-connect-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-content h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-content p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.instagram-connect-btn {
+  background: #1877f2;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: auto;
+  display: inline-block;
+}
+
+.instagram-connect-btn:hover:not(:disabled) {
+  background: #1664d9;
+}
+
+.info-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.page-selection {
+  margin: 1rem 0;
+}
+
+.page-selection h4 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.pages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.page-select-btn {
+  background: #1877f2;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.page-select-btn:hover:not(:disabled) {
+  background: #1664d9;
+}
+
+.page-select-btn:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.instagram-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.instagram-post-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.instagram-post-card:hover {
+  transform: translateY(-2px);
+}
+
+.post-media {
+  position: relative;
+  padding-top: 100%; 
+}
+
+.post-media img,
+.post-media video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-details {
+  padding: 1rem;
+}
+
+.post-caption {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post-metrics {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.view-on-instagram {
+  display: inline-block;
+  color: #1877f2;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.view-on-instagram:hover {
+  text-decoration: underline;
+}
+
+.instagram-connected h3 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.instagram-profile {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile-info h3 {
+  margin: 0;
+  color: #262626;
+  font-size: 1.2rem;
+}
+
+.profile-info p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.pagination-btn {
+  background: #1877f2;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.pagination-btn:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #1664d9;
+}
+
+.pagination-info {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.image-upload-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.image-upload-container h3 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.file-input {
+  padding: 0.5rem;
+  border: 2px dashed #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.image-preview {
+  max-width: 300px;
+  margin: 1rem 0;
+}
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.caption-input {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.caption-input:focus {
+  border-color: #1877f2;
+  outline: none;
+}
+
+.upload-btn {
+  background: #1877f2;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.upload-btn:hover:not(:disabled) {
+  background: #1664d9;
+}
+
+.upload-btn:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.auth-toggle-container {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}

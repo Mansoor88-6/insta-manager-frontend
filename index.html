@@ -8,6 +8,15 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId: '4031012403786489',
+          xfbml: true,
+          version: 'v21.0'
+        });
+      };
+    </script>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>

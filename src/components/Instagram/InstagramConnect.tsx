@@ -39,12 +39,13 @@ export default function InstagramConnect() {
     if (window.FB) {
       setFbReady(true)
     } else {
+      const appId = import.meta.env.VITE_FACEBOOK_APP_ID;
       window.fbAsyncInit = function() {
         window.FB.init({
-          appId: import.meta.env.VITE_FACEBOOK_APP_ID,
+          appId,
           cookie: true,
           xfbml: true,
-          version: 'v18.0'
+          version: 'v21.0'
         });
         setFbReady(true);
       };

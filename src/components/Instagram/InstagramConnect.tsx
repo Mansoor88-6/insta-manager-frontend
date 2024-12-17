@@ -1,4 +1,12 @@
-import { useState } from 'react'
+declare global {
+  interface Window {
+    fbAsyncInit: () => void;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    FB: any;
+  }
+}
+
+import { useState, useEffect } from 'react'
 import { useAuth } from '../../contexts/AuthContext'
 import FacebookLogin, { ReactFacebookLoginInfo } from 'react-facebook-login'
 
@@ -24,8 +32,24 @@ export default function InstagramConnect() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [pages, setPages] = useState<FacebookPage[]>([])
-  // const [selectedPageId, setSelectedPageId] = useState<string>('')
+  const [fbReady, setFbReady] = useState(false)
   const { user } = useAuth()
+
+  useEffect(() => {
+    if (window.FB) {
+      setFbReady(true)
+    } else {
+      window.fbAsyncInit = function() {
+        window.FB.init({
+          appId: import.meta.env.VITE_FACEBOOK_APP_ID,
+          cookie: true,
+          xfbml: true,
+          version: 'v18.0'
+        });
+        setFbReady(true);
+      };
+    }
+  }, []);
 
   const handleFacebookResponse = async (response: ReactFacebookLoginInfo) => {
     try {
@@ -90,7 +114,7 @@ export default function InstagramConnect() {
         <p>Link your Instagram Professional account to manage your posts and content.</p>
         {error && <div className="error">{error}</div>}
         
-        {pages.length === 0 ? (
+        {pages.length === 0 && fbReady ? (
           <FacebookLogin
             appId={import.meta.env.VITE_FACEBOOK_APP_ID}
             autoLoad={false}
@@ -100,6 +124,8 @@ export default function InstagramConnect() {
             cssClass="instagram-connect-btn"
             textButton={loading ? 'Connecting...' : 'Connect with Facebook'}
           />
+        ) : pages.length === 0 ? (
+          <div>Loading Facebook SDK...</div>
         ) : (
           <div className="page-selection">
             <h4>Select your Facebook Page</h4>
